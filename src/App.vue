@@ -5,9 +5,6 @@ import MainBodyContent from './views/MainBodyContent.vue';
 </script>
 
 <template>
-  
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <img alt="Vue logo" src="/favicon.ico" />
   <MainBodyContent />
 </template>
 
