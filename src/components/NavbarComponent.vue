@@ -1,4 +1,12 @@
+
+<script setup lang="ts">import apiService from '../apiService';
+
+function btnApi(){
+    apiService.$ApiService()
+}
+</script>
 <template>
+<button @click="btnApi">开始请求</button>
     <!-- Navbar-->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page. 移除"navbar-sticky"类，使导航条可以在页面上滚动。  -->
     <header class="bg-light shadow-sm navbar-sticky">
@@ -29,6 +37,8 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse me-auto order-lg-2" id="navbarCollapse">
+                     <router-link :to="{ name: 'Home' }">Home</router-link> |
+                      <router-link :to="{ name: 'About' }">About</router-link> |
                     <hr class="my-3" />
                     <!-- Primary menu-->
                     <ul class="navbar-nav">
@@ -38,6 +48,7 @@
                                 href="#"
                                 data-bs-toggle="dropdown"
                             >主页</a>
+                            <router-link :to="{ name: 'Home' }">Home</router-link> |
                             <ul class="dropdown-menu">
                                 <li class="dropdown position-static mb-0">
                                     <a
